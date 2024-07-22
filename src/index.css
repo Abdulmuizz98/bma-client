@@ -1,0 +1,20 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.provider-radio {
+}
+
+.provider-label.choice-provider .wrapper {
+  border-color: #5f2eea;
+}
+
+.provider-label div > .icon {
+  display: none;
+}
+
+.provider-label.choice-provider div > .icon {
+  display: block;
+}
