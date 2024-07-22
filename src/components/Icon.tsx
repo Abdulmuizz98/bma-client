@@ -60,11 +60,11 @@ export const BmAirtime = () => (
   </svg>
 );
 
-export const BmPhone = () => (
+export const BmPhone = ({size=16}: {size?:number}) => (
   <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
+    width={size}
+    height={size}
+    viewBox={`0 0 16 16`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -82,11 +82,11 @@ export const BmPhone = () => (
   </svg>
 );
 
-export const BmNaira = () => (
+export const BmNaira = ({size=16}: {size?:number}) => (
   <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
+    width={size}
+    height={size}
+    viewBox={`0 0 16 16`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -116,11 +116,11 @@ export const BmNaira = () => (
   </svg>
 );
 
-export const BmTrash = () => (
+export const BmTrash = ({size=24}: {size?:number}) => (
   <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    viewBox={`0 0 24 24`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -134,11 +134,11 @@ export const BmTrash = () => (
   </svg>
 );
 
-export const BmEdit = () => (
+export const BmEdit = ({size=20}: {size?:number}) => (
   <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
+  width={size}
+  height={size}
+  viewBox={`0 0 20 20`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
