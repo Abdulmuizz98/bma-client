@@ -52,12 +52,12 @@ export default function Checkout() {
       amount: 25,
     },
   ]);
-const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
-const handleSubmit = (e:any) => {
-  e.preventDefault();
-  setOpen(true)
-}
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setOpen(true);
+  };
   return (
     <>
       <main className="flex flex-col md:flex-row gap-6 font-sans">
@@ -108,7 +108,11 @@ const handleSubmit = (e:any) => {
             </button>
           </div>
         </div>
-        <form onSubmit={handleSubmit} action="" className="md:flex-1 rounded-[12px] border-[1px] border-[#EAECF0] bg-white p-[15px] md:p-[25px] flex flex-col gap-6">
+        <form
+          onSubmit={handleSubmit}
+          action=""
+          className="md:flex-1 rounded-[12px] border-[1px] border-[#EAECF0] bg-white p-[15px] md:p-[25px] flex flex-col gap-6"
+        >
           <div className="flex flex-col ">
             <h3 className="text-[22px] text-[#101828] font-[700]">
               Contact information{" "}
@@ -117,14 +121,14 @@ const handleSubmit = (e:any) => {
               Please provide your best email
             </span>
           </div>
-          <div  className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <input
               required
               type="text"
               placeholder="Full name"
               className="rounded-[16px] border-none outline-none bg-[#F2F4F7] p-4 placeholder:text-[#667085] placeholder:font-[500] text-[14px]"
             />
-            <input            
+            <input
               required
               type="email"
               placeholder="Email"
@@ -146,7 +150,12 @@ const handleSubmit = (e:any) => {
                   htmlFor="paystack"
                   className="flex-1 flex gap-3 items-center text-[14px]"
                 >
-                  <img alt="paystack logo" src="/images/paystack.png" width={35} height={35}/>
+                  <img
+                    alt="paystack logo"
+                    src="/images/paystack.png"
+                    width={35}
+                    height={35}
+                  />
                   <h3 className=" text-[#101828] font-[500]">
                     Pay with Paystack
                   </h3>
@@ -199,15 +208,19 @@ const handleSubmit = (e:any) => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-3">
-          <button type="button" className="md:flex-1 w-full rounded-[40px] h-[48px] border-[1px] border-purple flex items-center justify-center text-[14px] text-purple font-[500] font-sans">Cancel</button>
-            <button className="md:flex-1 w-full rounded-[40px] h-[48px] bg-purple flex items-center justify-center text-[14px] text-white font-[500] font-sans">Pay ₦1,700</button>
+            <button
+              type="button"
+              className="md:flex-1 w-full rounded-[40px] h-[48px] border-[1px] border-purple flex items-center justify-center text-[14px] text-purple font-[500] font-sans"
+            >
+              Cancel
+            </button>
+            <button className="md:flex-1 w-full rounded-[40px] h-[48px] bg-purple flex items-center justify-center text-[14px] text-white font-[500] font-sans">
+              Pay ₦1,700
+            </button>
           </div>
         </form>
       </main>
-      {
-        open &&
-        <PaymentSuccessModal setOpen={setOpen}/>
-      }
+      {open && <PaymentSuccessModal setOpen={setOpen} />}
     </>
   );
 }
